@@ -234,3 +234,76 @@ const removeDublicateArray = (arr) => {
 }
 
 console.log(removeDublicateArray(['baba','dada','baba','dada','sister','bro','sister','mom','aunt','mom','uncle']));
+
+
+
+
+// from problem new file 
+
+
+
+// Write an arrow function where it will do the following:
+//a) It will take an array where the array elements will be the name of your friends
+//b) Check if the length of each element is even, push elements
+//with even length to a new array and return the result Print the result.
+
+const arr = ['mahdi', 'manum', 'Zihad','abal', 'Nahid', 'Jakir', 'Mahmud'];
+
+const findEvenLength = (arr) => {  
+    const copy = [];
+    for (let i = 0; i < arr.length; i++){
+        const element = arr[i];
+        if (element.length%2===0) {
+          copy.push(element)
+            
+        }
+        
+    }
+    return copy;
+
+
+    
+}
+
+// console.log(findEvenLength(arr));
+
+// Write an arrow function where it will do the following:
+//.a) It will take two array inputs
+//b) Combine the two arrays and assign them in a new array
+//c) Find the maximum number from the new array and return the result
+
+const numberOne = [20, 40, 10, 5, 4, 67, 4];
+const numberTwo = [80, 90, 100, 400, 600, 10];
+
+const findMaxNumber = (nOne, nTwo) => {
+  
+  const newArray = [...nOne, ...nTwo]
+  const maxNmuber =Math.min.apply(null,newArray)
+  return maxNmuber;
+
+
+} 
+// console.log(findMaxNumber(numberOne,numberTwo));
+
+
+//  Challenging Follow above array of objects. So, you have 3 objects as
+// array element. Can you find out the total sum from here?
+
+// 20 + 15 + 22 = 57 . The output will be 57
+
+// What are you thinking? Yeah! Do it with for loop. I know you can do it.
+// But! Wait !! Wait !!! Do the same task using array.reduce() method.
+
+const people = [
+  {name:'mina' ,age:20},
+  {name:'mice',age:15},
+  {name:'lucy',age:22}
+
+]
+
+const findTotalAges = people.reduce((prev, current) => {
+ 
+
+  return prev+current.age
+},0)
+// console.log(findTotalAges);
