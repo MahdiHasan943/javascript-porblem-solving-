@@ -322,3 +322,29 @@ for (let i = 1; i <= number; i++) {
     n1 = n2;
     n2 = nextTerm;
 }
+
+
+const arr = [6, 8, 10, 12, 16, 18, 22, 26];
+
+const findOneMissingOdd = (e) => {
+    let missingNumbers = [];
+
+    for (let i = 0; i < e.length - 1; i++) {
+        let n = e[i];
+        let next = n + 2;
+
+        if (e[i + 1] !== next) {
+            missingNumbers.push(next);
+        }
+    }
+
+    // Handle the case when the missing numbers are at the end of the array
+    // if (e[e.length - 1] % 2 === 0) {
+    //     missingNumbers.push(e[e.length - 1] + 2);
+    // }
+
+    return missingNumbers
+};
+
+console.log(findOneMissingOdd(arr));
+
